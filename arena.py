@@ -7,6 +7,8 @@ class Arena:
         print("Fight starts!")
 
         while self.first.hp > 0 and self.second.hp > 0:
+            
+            input("Press ENTER for next attack")
             self.first.attack(self.second)
             print(self.second.name, "HP =", self.second.hp)
             print()
@@ -14,6 +16,7 @@ class Arena:
             if self.second.hp <= 0:
                 break
 
+            input("Press ENTER for next attack")
             self.second.attack(self.first)
             print(self.first.name, "HP =", self.first.hp)
             print()
